@@ -1,0 +1,8 @@
+ws/devel
+ws/log
+ws/build
+ws/install
+ws/.catkin_tools
+data/
+.ros_docker/
+.vscode/

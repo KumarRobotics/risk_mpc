@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>jackal_description</name>
+  <version>1.0.4</version>
+  <description>URDF robot description for Jackal</description>
+
+  <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
+
+  <license>BSD</license>
+
+  <author email="mpurvis@clearpathrobotics.com">Mike Purvis</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>robot_state_publisher</depend>
+  <depend>urdf</depend>
+  <!-- <depend>velodyne_description</depend> -->
+  <depend>xacro</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
