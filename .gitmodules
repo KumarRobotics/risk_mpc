@@ -2,15 +2,6 @@
 	path = ws/src/jackal
 	url = https://github.com/KumarRobotics/jackal.git
 	branch = jackal2_jazzy
-# [submodule "ws/src/ros_numpy"]
-# 	path = ws/src/ros_numpy
-# 	url = https://github.com/eric-wieser/ros_numpy.git
-# [submodule "ws/src/ouster_example"]
-# 	path = ws/src/ouster_example
-# 	url = https://github.com/ouster-lidar/ouster_example.git
-# [submodule "ws/src/vision_opencv"]
-# 	path = ws/src/vision_opencv
-# 	url = https://github.com/ros-perception/vision_opencv.git
 [submodule "ws/src/clearpath_msgs"]
 	path = ws/src/clearpath_msgs
 	url = https://github.com/clearpathrobotics/clearpath_msgs.git
