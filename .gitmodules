@@ -21,3 +21,18 @@
 	path = ws/src/ouster-ros
 	url = https://github.com/ouster-lidar/ouster-ros.git
 	branch = ros2
+[submodule "ws/src/custom_msgs_pkg"]
+	path = ws/src/custom_msgs_pkg
+	url = https://github.com/frankgon1627/custom_msgs_pkg.git
+[submodule "ws/src/DecompROS2"]
+	path = ws/src/DecompROS2
+	url = https://github.com/frankgon1627/DecompROS2.git
+[submodule "ws/src/planners"]
+	path = ws/src/planners
+	url = https://github.com/frankgon1627/planners.git
+[submodule "ws/src/negative_obstacle_detection"]
+	path = ws/src/negative_obstacle_detection
+	url = https://github.com/frankgon1627/negative_obstacle_detection.git
+[submodule "ws/src/mpc_controller"]
+	path = ws/src/mpc_controller
+	url = https://github.com/frankgon1627/mpc_controller.git
