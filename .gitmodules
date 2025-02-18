@@ -1,0 +1,23 @@
+[submodule "ws/src/jackal"]
+	path = ws/src/jackal
+	url = https://github.com/KumarRobotics/jackal.git
+	branch = jackal2_jazzy
+[submodule "ws/src/clearpath_msgs"]
+	path = ws/src/clearpath_msgs
+	url = https://github.com/clearpathrobotics/clearpath_msgs.git
+[submodule "ws/src/robot_upstart"]
+	path = ws/src/robot_upstart
+	url = https://github.com/clearpathrobotics/robot_upstart.git
+	branch = foxy-devel
+[submodule "ws/src/twist_mux"]
+	path = ws/src/twist_mux
+	url = https://github.com/ros-teleop/twist_mux.git
+	branch = humble
+[submodule "ws/src/wireless"]
+	path = ws/src/wireless
+	url = https://github.com/clearpathrobotics/wireless.git
+	branch = humble-devel
+[submodule "ws/src/ouster-ros"]
+	path = ws/src/ouster-ros
+	url = https://github.com/ouster-lidar/ouster-ros.git
+	branch = ros2
