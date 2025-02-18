@@ -1,6 +1,0 @@
-# Request: Pose object for the goal position (includes position and orientation)
-geometry_msgs/Pose pose
-
----
-# Response: success (boolean)
-bool success
