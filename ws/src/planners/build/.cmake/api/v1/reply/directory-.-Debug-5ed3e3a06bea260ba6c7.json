@@ -1,0 +1,526 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"ament_environment_hooks",
+			"_ament_cmake_python_register_environment_hook",
+			"ament_python_install_package",
+			"_ament_cmake_python_install_package",
+			"ament_index_register_resource",
+			"ament_cmake_environment_generate_package_run_dependencies_marker",
+			"include",
+			"ament_execute_extensions",
+			"ament_package",
+			"ament_cmake_environment_generate_parent_prefix_path_marker",
+			"ament_generate_package_environment",
+			"ament_index_register_package",
+			"_ament_package"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/environment_hooks/ament_environment_hooks.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_python/cmake/ament_cmake_python-extras.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_python/cmake/ament_python_install_package.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/index/ament_index_register_resource.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/environment/ament_cmake_environment_package_hook.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/core/ament_package.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/environment_hooks/ament_cmake_environment_hooks_package_hook.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/environment_hooks/ament_generate_package_environment.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/index/ament_index_register_package.cmake",
+			"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/index/ament_cmake_index_package_hook.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 46,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 38,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 36,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 70,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 87,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 39,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 154,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 181,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 191,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 66,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 48,
+				"parent" : 13
+			},
+			{
+				"file" : 5,
+				"parent" : 14
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 47,
+				"parent" : 15
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 29,
+				"parent" : 16
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 105,
+				"parent" : 17
+			},
+			{
+				"command" : 10,
+				"file" : 5,
+				"line" : 48,
+				"parent" : 15
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 43,
+				"parent" : 19
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 105,
+				"parent" : 20
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 48,
+				"parent" : 13
+			},
+			{
+				"file" : 8,
+				"parent" : 22
+			},
+			{
+				"command" : 1,
+				"file" : 8,
+				"line" : 20,
+				"parent" : 23
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 70,
+				"parent" : 24
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 87,
+				"parent" : 24
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 70,
+				"parent" : 24
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 87,
+				"parent" : 24
+			},
+			{
+				"command" : 11,
+				"file" : 8,
+				"line" : 26,
+				"parent" : 23
+			},
+			{
+				"command" : 0,
+				"file" : 9,
+				"line" : 91,
+				"parent" : 29
+			},
+			{
+				"command" : 0,
+				"file" : 9,
+				"line" : 91,
+				"parent" : 29
+			},
+			{
+				"command" : 0,
+				"file" : 9,
+				"line" : 91,
+				"parent" : 29
+			},
+			{
+				"command" : 0,
+				"file" : 9,
+				"line" : 107,
+				"parent" : 29
+			},
+			{
+				"command" : 0,
+				"file" : 9,
+				"line" : 119,
+				"parent" : 29
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 48,
+				"parent" : 13
+			},
+			{
+				"file" : 11,
+				"parent" : 35
+			},
+			{
+				"command" : 12,
+				"file" : 11,
+				"line" : 16,
+				"parent" : 36
+			},
+			{
+				"command" : 5,
+				"file" : 10,
+				"line" : 29,
+				"parent" : 37
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 105,
+				"parent" : 38
+			},
+			{
+				"command" : 13,
+				"file" : 7,
+				"line" : 68,
+				"parent" : 12
+			},
+			{
+				"command" : 0,
+				"file" : 7,
+				"line" : 150,
+				"parent" : 40
+			},
+			{
+				"command" : 0,
+				"file" : 7,
+				"line" : 157,
+				"parent" : 40
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/planners",
+			"paths" : 
+			[
+				"mpc_planner_corridors"
+			],
+			"targetId" : "mpc_planner_corridors::@6890427a1f51a3e7e1df",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "mpc_planner_corridors::@6890427a1f51a3e7e1df",
+				"index" : 2
+			},
+			"destination" : "lib/planners",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "share/planners/environment",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/pythonpath.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "share/planners/environment",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/pythonpath.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.11/site-packages/planners-0.0.0-py3.11.egg-info",
+			"paths" : 
+			[
+				{
+					"from" : "build/ament_cmake_python/planners/planners.egg-info",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.11/site-packages/planners",
+			"paths" : 
+			[
+				{
+					"from" : "planners",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"type" : "code"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Unspecified",
+			"destination" : "lib/planners",
+			"paths" : 
+			[
+				"scripts/jump_point_planner.py",
+				"scripts/occupancy_grid_parser.py",
+				"scripts/mpc_planner_max_approx_cost_risk.py",
+				"scripts/mpc_planner_max_approx_cost.py",
+				"scripts/a_star_planner.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/package_run_dependencies",
+			"paths" : 
+			[
+				"build/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/planners"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 21,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/parent_prefix_path",
+			"paths" : 
+			[
+				"build/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/planners"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 25,
+			"component" : "Unspecified",
+			"destination" : "share/planners/environment",
+			"paths" : 
+			[
+				"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 26,
+			"component" : "Unspecified",
+			"destination" : "share/planners/environment",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/ament_prefix_path.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 27,
+			"component" : "Unspecified",
+			"destination" : "share/planners/environment",
+			"paths" : 
+			[
+				"/home/frankgon/miniforge3/envs/ros_env/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 28,
+			"component" : "Unspecified",
+			"destination" : "share/planners/environment",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/path.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 30,
+			"component" : "Unspecified",
+			"destination" : "share/planners",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/local_setup.bash"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 31,
+			"component" : "Unspecified",
+			"destination" : "share/planners",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/local_setup.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 32,
+			"component" : "Unspecified",
+			"destination" : "share/planners",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/local_setup.zsh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 33,
+			"component" : "Unspecified",
+			"destination" : "share/planners",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/local_setup.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 34,
+			"component" : "Unspecified",
+			"destination" : "share/planners",
+			"paths" : 
+			[
+				"build/ament_cmake_environment_hooks/package.dsv"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 39,
+			"component" : "Unspecified",
+			"destination" : "share/ament_index/resource_index/packages",
+			"paths" : 
+			[
+				"build/ament_cmake_index/share/ament_index/resource_index/packages/planners"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 41,
+			"component" : "Unspecified",
+			"destination" : "share/planners/cmake",
+			"paths" : 
+			[
+				"build/ament_cmake_core/plannersConfig.cmake",
+				"build/ament_cmake_core/plannersConfig-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 42,
+			"component" : "Unspecified",
+			"destination" : "share/planners",
+			"paths" : 
+			[
+				"package.xml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

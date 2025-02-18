@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-5ed3e3a06bea260ba6c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "planners",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_planners_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_planners_egg-Debug-441a8dc8a30e34919333.json",
+					"name" : "ament_cmake_python_build_planners_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_planners::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_planners-Debug-064f2e161d0023cbbcce.json",
+					"name" : "ament_cmake_python_copy_planners",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mpc_planner_corridors::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mpc_planner_corridors-Debug-fc1b5744fe4aa78b07d8.json",
+					"name" : "mpc_planner_corridors",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "planners_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-planners_uninstall-Debug-bd3956b21626a0678a0f.json",
+					"name" : "planners_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-e6894c65bf9fda6ea9dc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/frankgon/ros2_ws/src/planners/build",
+		"source" : "/home/frankgon/ros2_ws/src/planners"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

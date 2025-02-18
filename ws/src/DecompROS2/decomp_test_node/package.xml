@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>decomp_test_node</name>
+  <version>0.0.1</version>
+  <description>The test_node package</description>
+  <maintainer email="sikang@todo.todo">sikang</maintainer>
+  <maintainer email="ggeesara@gmail.com">sikang</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rosbag2_cpp</depend>
+  <depend>decomp_util</depend>
+  <depend>sensor_msgs</depend> 
+  <depend>nav_msgs</depend>
+  <depend>pcl_conversions</depend>
+  <depend>decomp_ros_msgs</depend>
+  <depend>decomp_rviz_plugins</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
