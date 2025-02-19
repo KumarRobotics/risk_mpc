@@ -18,8 +18,8 @@ Three architectures are provided:
 
 ### How to build and use?
 ```
-git clone https://github.com/KumarRobotics/dcist_master_ros2.git
-cd dcist_master_ros2 && git submodule update --init --recursive
+git clone https://github.com/KumarRobotics/negative_obstacle_detection.git
+cd negative_obstacle_detection && git submodule update --init --recursive
 ./build.bash negative-obstacle-detection x86_64_nvda
 ./run.bash negative-obstacle-detection-nvda:latest
 ```
