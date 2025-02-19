@@ -1,8 +1,8 @@
-DCIST Master
+Negative Obstacle Detection
 =============
 ![Docker CI Build](https://github.com/KumarRobotics/dcist_master/actions/workflows/docker-build.yaml/badge.svg?branch=master)
 
-This is the base image used for the DCIST robots at KR, for the Jackals to run ROS2-Jazzy on Ubuntu-24.04
+This is the base image used for negative obstacle detection at KR, for the Jackals to run ROS2-Jazzy on Ubuntu-24.04
 
 TL;DR:
  - It installs the dependencies required by many user packages (see
