@@ -6,22 +6,22 @@ This is the base image used for the DCIST robots at KR, for the Jackals to run R
 
 TL;DR:
  - It installs the dependencies required by many user packages (see
-   `dcist-master/Dockerfile`).
+   `negative-obstacle-detection/Dockerfile`).
  - It copies the `ws` main dcist workspace and builds it.
  - It provides helper scripts `build.bash`, `run.bash` and `join.bash`
 
 ### Architectures
 Three architectures are provided:
- - `kumarrobotics/dcist-master-jazzy-bare` - **x86_64 CPU**: To run in CPU-only platforms, such as the Intel NUC for the high-altitude quads. Based on `ubuntu` Docker images.
- - `kumarrobotics/dcist-master-jazzy-nvda` - **x86_64 CUDA**: To run in x86_64 GPU-accelerated platforms, such as the computers on the Jackals. Based on `nvidia/cuda` Docker images.
- - `kumarrobotics/dcist-master-jazzy-nvda` - **arm64 CUDA**: To run in Nvidia Jetson platforms.
+ - `kumarrobotics/negative-obstacle-detection-bare` - **x86_64 CPU**: To run in CPU-only platforms, such as the Intel NUC for the high-altitude quads. Based on `ubuntu` Docker images.
+ - `kumarrobotics/negative-obstacle-detection-nvda` - **x86_64 CUDA**: To run in x86_64 GPU-accelerated platforms, such as the computers on the Jackals. Based on `nvidia/cuda` Docker images.
+ - `kumarrobotics/negative-obstacle-detection-nvda` - **arm64 CUDA**: To run in Nvidia Jetson platforms.
 
 ### How to build and use?
 ```
 git clone https://github.com/KumarRobotics/dcist_master_ros2.git
 cd dcist_master_ros2 && git submodule update --init --recursive
-./build.bash dcist-master-jazzy x86_64_nvda
-./run.bash dcist-master-jazzy-nvda:latest
+./build.bash negative-obstacle-detection x86_64_nvda
+./run.bash negative-obstacle-detection-nvda:latest
 ```
 
 ### Notes on image building

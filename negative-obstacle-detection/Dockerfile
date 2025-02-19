@@ -17,22 +17,29 @@ RUN apt-get update \
 
 # General dependencies for development
 RUN apt-get update \
-  && apt-get install -y \
+  && apt-get install -y --install-recommends\
   build-essential \
   cmake \
+  coinor-libipopt-dev \
   cppcheck \
-  gdb \
-  git \
-  libeigen3-dev \
+  curl \
+  dbus-x11 \
   g++ \
+  gcc \
+  gdb \
+  gfortran \
+  git \
   libbluetooth-dev \
   libcwiid-dev \
+  libeigen3-dev \
   libgoogle-glog-dev \
+  liblapack-dev \
+  libpcl-dev \
   libspnav-dev \
   libusb-dev \
-  libpcl-dev \
   lsb-release \
   mercurial \
+  pkg-config \
   python3-dbg \
   python3-empy \
   python3-pip \
@@ -40,12 +47,11 @@ RUN apt-get update \
   python3-sklearn \
   software-properties-common \
   sudo \
+  swig \
   wget \
-  curl \
   cmake-curses-gui \
   geany \
   tmux \
-  dbus-x11 \
   iputils-ping \
   default-jre \
   iproute2 \
@@ -269,18 +275,29 @@ RUN cd /home/dcist \
 RUN cd /home/dcist/dcist_ws/src/ \
   && git clone --recursive https://github.com/frankgon1627/zed-ros2-wrapper.git
 
+# install and b uild casadi from source
+RUN cd /home/dcist \
+  && git clone https://github.com/casadi/casadi.git -b main casadi \
+  && cd casadi \
+  && git pull \
+  && mkdir build \
+  && cd build \
+  && cmake -DWITH_PYTHON=ON -DWITH_PYTHON3=ON -DWITH_IPOPT=ON ..\
+  && make \
+  && sudo make install
+
 # build the dcist_ws
-RUN cd /home/dcist/dcist_ws \
-  && /bin/bash -c 'source /opt/ros/jazzy/setup.bash && \
-    source /home/dcist/microros_ws/install/setup.bash && \
-    source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash && \
-    sudo apt update && \
-    rosdep update && \
-    rosdep install --from-paths src --ignore-src --rosdistro=jazzy -y && \
-    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs -DCMAKE_CXX_FLAGS="-Wl,--allow-shlib-undefined"'
+# RUN cd /home/dcist/dcist_ws \
+#   && /bin/bash -c 'source /opt/ros/jazzy/setup.bash && \
+#     source /home/dcist/microros_ws/install/setup.bash && \
+#     source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash && \
+#     sudo apt update && \
+#     rosdep update && \
+#     rosdep install --from-paths src --ignore-src --rosdistro=jazzy -y && \
+#     colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs -DCMAKE_CXX_FLAGS="-Wl,--allow-shlib-undefined"'
     
-RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash" >> ~/.bashrc'
-RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/install/setup.bash" >> ~/.bashrc'
-RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc' 
+# RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash" >> ~/.bashrc'
+# RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/install/setup.bash" >> ~/.bashrc'
+# RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc' 
 # RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc' 
 
