@@ -42,3 +42,8 @@ To launch the camera and LIDAR, use the following commands:
 ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zed2i
 ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_dest:=192.168.100.1 viz:=false
 ```
+
+To use ouster drivers with default QoS (needed for DLIO currently)
+```
+ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_dest:=192.168.100.1 viz:=false use_system_default_qos:=true
+```
