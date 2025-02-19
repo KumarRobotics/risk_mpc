@@ -287,17 +287,17 @@ RUN cd /home/dcist \
   && sudo make install
 
 # build the dcist_ws
-# RUN cd /home/dcist/dcist_ws \
-#   && /bin/bash -c 'source /opt/ros/jazzy/setup.bash && \
-#     source /home/dcist/microros_ws/install/setup.bash && \
-#     source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash && \
-#     sudo apt update && \
-#     rosdep update && \
-#     rosdep install --from-paths src --ignore-src --rosdistro=jazzy -y && \
-#     colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs -DCMAKE_CXX_FLAGS="-Wl,--allow-shlib-undefined"'
+RUN cd /home/dcist/dcist_ws \
+  && /bin/bash -c 'source /opt/ros/jazzy/setup.bash && \
+    source /home/dcist/microros_ws/install/setup.bash && \
+    source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash && \
+    sudo apt update && \
+    rosdep update && \
+    rosdep install --from-paths src --ignore-src --rosdistro=jazzy -y && \
+    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs -DCMAKE_CXX_FLAGS="-Wl,--allow-shlib-undefined"'
     
-# RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash" >> ~/.bashrc'
-# RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/install/setup.bash" >> ~/.bashrc'
-# RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc' 
+RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash" >> ~/.bashrc'
+RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/install/setup.bash" >> ~/.bashrc'
+RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc' 
 # RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc' 
 
