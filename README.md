@@ -24,9 +24,6 @@ cd negative_obstacle_detection && git submodule update --init --recursive
 ./run.bash negative-obstacle-detection-nvda:latest
 ```
 
-### Notes on image building
-  - Despite the colcon build command being present in the Dockerfile, it the dcist_ws does not remain built. That being said, if after running the docker container, if you build it inside the docker container it will remain built upon future executions (not sure why)
-
 ### Notes on how to start up the Jackal
 To launch the base hardware (no sensors), use the following commands:
 
