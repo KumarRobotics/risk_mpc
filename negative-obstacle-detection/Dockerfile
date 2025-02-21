@@ -233,7 +233,6 @@ RUN cd /home/dcist \
   && cd microros_ws \
   && git clone -b jazzy https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup \
   && sudo apt update \
-  && rosdep update \
   && rosdep install --from-paths src --ignore-src -y \
   && /bin/bash -c "source /opt/ros/jazzy/setup.bash && \
     colcon build  && \
@@ -298,6 +297,7 @@ RUN cd /home/dcist/dcist_ws \
     
 RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash" >> ~/.bashrc'
 RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/install/setup.bash" >> ~/.bashrc'
-RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc' 
+RUN /bin/sh -c 'echo "export ROS_DOMAIN_ID=5" >> ~/.bashrc' 
+# RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc' 
 # RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc' 
 
