@@ -265,9 +265,9 @@ RUN cd /home/dcist/dcist_ws/src \
 
 # download and install the ZED SDK
 RUN cd /home/dcist \
-  && wget -O zed_sdk.run https://download.stereolabs.com/zedsdk/4.2/cu12/ubuntu22?_gl=1*mdjmft*_gcl_au*MTI2NTI5NjkuMTczMTQ0NTcwNQ.. \
+  && wget -O zed_sdk.run https://download.stereolabs.com/zedsdk/4.2/cu12/ubuntu24?_gl=1*1x6bx14*_gcl_au*MTUzMjE4OTEyOS4xNzQwMTczNjA4 \
   && chmod +x zed_sdk.run \
-  && ./zed_sdk.run -- silent skip_cuda skip_python skip_od_module\
+  && ./zed_sdk.run -- silent skip_cuda skip_od_module\
   && rm zed_sdk.run
 
 # install the ZED ROS2 wrapper
