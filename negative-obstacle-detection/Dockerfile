@@ -248,7 +248,7 @@ RUN cd /home/dcist \
   && mkdir build \
   && cd build \
   && cmake .. \
-  && make -j \
+  && make -j $(nproc) \
   && sudo make install
 
 # Copy the dcist_ws environment
@@ -282,7 +282,7 @@ RUN cd /home/dcist \
   && mkdir build \
   && cd build \
   && cmake -DWITH_PYTHON=ON -DWITH_PYTHON3=ON -DWITH_IPOPT=ON ..\
-  && make \
+  && make -j $(nproc) \
   && sudo make install
 
 # build the dcist_ws
