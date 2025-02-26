@@ -233,6 +233,7 @@ RUN cd /home/dcist \
   && cd microros_ws \
   && git clone -b jazzy https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup \
   && sudo apt update \
+  && rosdep update \
   && rosdep install --from-paths src --ignore-src -y \
   && /bin/bash -c "source /opt/ros/jazzy/setup.bash && \
     colcon build  && \
