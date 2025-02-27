@@ -32,7 +32,7 @@ ros2 launch jackal_robot bringup.launch.py
 ros2 run twist_stamper twist_stamper --ros-args -r  cmd_vel_in:=/jackal_velocity_controller/cmd_vel_unstamped -r cmd_vel_out:=/jackal_velocity_controller/cmd_vel
 ```
 
-### Notes on how to start the realsense and ouster
+### Notes on how to start the zed and ouster
 To launch the camera and LIDAR, use the following commands:
 
 ```
