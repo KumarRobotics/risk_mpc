@@ -112,7 +112,6 @@ RUN sudo apt-get update \
   ros-jazzy-twist-stamper \
   ros-jazzy-navigation2 \
   ros-jazzy-nav2-bringup \
-  ros-jazzy-ros2-control \
   ros-jazzy-ros2-controllers \
   ros-jazzy-gtsam \
   ros-jazzy-pcl-ros \
