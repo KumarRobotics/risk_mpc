@@ -30,9 +30,6 @@
 [submodule "ws/src/planners"]
 	path = ws/src/planners
 	url = https://github.com/frankgon1627/planners.git
-[submodule "ws/src/negative_obstacle_detection"]
-	path = ws/src/negative_obstacle_detection
-	url = https://github.com/frankgon1627/negative_obstacle_detection.git
 [submodule "ws/src/mpc_controller"]
 	path = ws/src/mpc_controller
 	url = https://github.com/frankgon1627/mpc_controller.git
