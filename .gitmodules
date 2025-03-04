@@ -39,6 +39,3 @@
 [submodule "ws/src/ros2_control"]
 	path = ws/src/ros2_control
 	url = https://github.com/ros-controls/ros2_control.git
-[submodule "ws/src/DLIO"]
-	path = ws/src/DLIO
-	url = git@github.com:KumarRobotics/direct_lidar_inertial_odometry.git
