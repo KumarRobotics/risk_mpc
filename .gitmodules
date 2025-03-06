@@ -36,12 +36,12 @@
 [submodule "ws/src/ros2_control"]
 	path = ws/src/ros2_control
 	url = https://github.com/ros-controls/ros2_control.git
-[submodule "ws/src/negative_obstacle_detection"]
-	path = ws/src/negative_obstacle_detection
-	url = https://github.com/frankgon1627/negative_obstacle_detection.git
 [submodule "ws/src/groundgrid"]
 	path = ws/src/groundgrid
 	url = https://github.com/frankgon1627/groundgrid.git
 [submodule "ws/src/DLIO"]
 	path = ws/src/DLIO
 	url = https://github.com/KumarRobotics/direct_lidar_inertial_odometry.git
+[submodule "ws/src/obstacle_detection"]
+	path = ws/src/obstacle_detection
+	url = https://github.com/frankgon1627/obstacle_detection.git
