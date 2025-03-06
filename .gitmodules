@@ -42,3 +42,6 @@
 [submodule "ws/src/groundgrid"]
 	path = ws/src/groundgrid
 	url = https://github.com/frankgon1627/groundgrid.git
+[submodule "ws/src/DLIO"]
+	path = ws/src/DLIO
+	url = https://github.com/KumarRobotics/direct_lidar_inertial_odometry.git
