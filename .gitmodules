@@ -38,4 +38,7 @@
 	url = https://github.com/ros-controls/ros2_control.git
 [submodule "ws/src/negative_obstacle_detection"]
 	path = ws/src/negative_obstacle_detection
-	url = git@github.com:frankgon1627/negative_obstacle_detection.git
+	url = https://github.com/frankgon1627/negative_obstacle_detection.git
+[submodule "ws/src/groundgrid"]
+	path = ws/src/groundgrid
+	url = https://github.com/frankgon1627/groundgrid.git
