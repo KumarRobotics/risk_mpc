@@ -45,3 +45,6 @@
 [submodule "ws/src/transforms"]
 	path = ws/src/transforms
 	url = https://github.com/frankgon1627/transforms.git
+[submodule "ws/src/mpc_controller"]
+	path = ws/src/mpc_controller
+	url = https://github.com/frankgon1627/mpc_controller.git
