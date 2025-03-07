@@ -30,9 +30,6 @@
 [submodule "ws/src/planners"]
 	path = ws/src/planners
 	url = https://github.com/frankgon1627/planners.git
-[submodule "ws/src/mpc_controller"]
-	path = ws/src/mpc_controller
-	url = https://github.com/frankgon1627/mpc_controller.git
 [submodule "ws/src/ros2_control"]
 	path = ws/src/ros2_control
 	url = https://github.com/ros-controls/ros2_control.git
