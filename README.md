@@ -49,5 +49,5 @@ ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_des
 To receive odometry, use the following commands:
 
 ```
-ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=false point_cloud_topic:=/ouster/points imu_topic:=/ouster/imu
+ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=false pointcloud_topic:=/ouster/points imu_topic:=/ouster/imu
 ```
