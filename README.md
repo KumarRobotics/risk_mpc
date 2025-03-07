@@ -44,3 +44,10 @@ To use ouster drivers with default QoS (needed for DLIO currently)
 ```
 ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_dest:=192.168.100.1 viz:=false use_system_default_qos:=true
 ```
+
+### Notes on how to get Odometry Estimates
+To receive odometry, use the following commands:
+
+```
+ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=false point_cloud_topic:=/ouster/points imu_topic:=/ouster/imu
+```

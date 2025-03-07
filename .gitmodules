@@ -48,3 +48,6 @@
 [submodule "ws/src/mpc_controller"]
 	path = ws/src/mpc_controller
 	url = https://github.com/frankgon1627/mpc_controller.git
+[submodule "ws/src/safety_controller"]
+	path = ws/src/safety_controller
+	url = https://github.com/frankgon1627/safety_controller.git
