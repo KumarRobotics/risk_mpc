@@ -6,22 +6,22 @@ This is the base image used for negative obstacle detection at KR, for the Jacka
 
 TL;DR:
  - It installs the dependencies required by many user packages (see
-   `negative-obstacle-detection/Dockerfile`).
+   `risk-mpc/Dockerfile`).
  - It copies the `ws` main dcist workspace and builds it.
  - It provides helper scripts `build.bash`, `run.bash` and `join.bash`
 
 ### Architectures
 Three architectures are provided:
- - `kumarrobotics/negative-obstacle-detection-bare` - **x86_64 CPU**: To run in CPU-only platforms, such as the Intel NUC for the high-altitude quads. Based on `ubuntu` Docker images.
- - `kumarrobotics/negative-obstacle-detection-nvda` - **x86_64 CUDA**: To run in x86_64 GPU-accelerated platforms, such as the computers on the Jackals. Based on `nvidia/cuda` Docker images.
- - `kumarrobotics/negative-obstacle-detection-nvda` - **arm64 CUDA**: To run in Nvidia Jetson platforms.
+ - `kumarrobotics/risk-mpc-bare` - **x86_64 CPU**: To run in CPU-only platforms, such as the Intel NUC for the high-altitude quads. Based on `ubuntu` Docker images.
+ - `kumarrobotics/risk-mpc-nvda` - **x86_64 CUDA**: To run in x86_64 GPU-accelerated platforms, such as the computers on the Jackals. Based on `nvidia/cuda` Docker images.
+ - `kumarrobotics/risk-mpc-nvda` - **arm64 CUDA**: To run in Nvidia Jetson platforms.
 
 ### How to build and use?
 ```
-git clone https://github.com/KumarRobotics/negative_obstacle_detection.git
-cd negative_obstacle_detection && git submodule update --init --recursive
-./build.bash negative-obstacle-detection x86_64_nvda
-./run.bash negative-obstacle-detection-nvda:latest
+git clone https://github.com/KumarRobotics/risk_mpc.git
+cd risk_mpc && git submodule update --init --recursive
+./build.bash risk-mpc x86_64_nvda
+./run.bash risk-mpc-nvda:latest
 ```
 
 ### Notes on how to start up the Jackal
