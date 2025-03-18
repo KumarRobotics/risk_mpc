@@ -45,14 +45,14 @@ ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_des
 ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_dest:=192.168.100.1 viz:=false use_system_default_qos:=true
 ``` -->
 
-### Notes on how to get Odometry Estimates
+### Notes on how to get dometry estimates
 To receive odometry, use the following commands:
 
 ```
 ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=false pointcloud_topic:=/ouster/points imu_topic:=/ouster/imu
 ```
 
-### Additional Relevant Launch Scripts
+### Additional relevant launch scripts
 
 To get static and dynamic transforms
 
