@@ -19,7 +19,7 @@
 	branch = humble-devel
 [submodule "ws/src/ouster-ros"]
 	path = ws/src/ouster-ros
-	url = https://github.com/ouster-lidar/ouster-ros.git
+	url = https://github.com/KumarRobotics/ouster-ros.git
 	branch = ros2
 [submodule "ws/src/custom_msgs_pkg"]
 	path = ws/src/custom_msgs_pkg
