@@ -40,14 +40,37 @@ ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zed2i
 ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_dest:=192.168.100.1 viz:=false
 ```
 
-To use ouster drivers with default QoS (needed for DLIO currently)
+<!-- To use ouster drivers with default QoS (needed for DLIO currently)
 ```
 ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=192.168.100.12 udp_dest:=192.168.100.1 viz:=false use_system_default_qos:=true
-```
+``` -->
 
 ### Notes on how to get Odometry Estimates
 To receive odometry, use the following commands:
 
 ```
 ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=false pointcloud_topic:=/ouster/points imu_topic:=/ouster/imu
+```
+
+### Additional Relevant Launch Scripts
+
+To get static and dynamic transforms
+
+```
+ros2 run transforms transform_pub
+```
+
+To get obstacle detection
+
+```
+ros2 launch groundgrid ground_grid.launch.py
+ros2 run positive_obstacle_detection positive_obstacle_detection
+ros2 run negative_obstacle_detection noor_update
+```
+
+To get the 2-DOF MPC
+
+```
+ros2 launch planners planners.launch.py
+ros2 run mpc_controller mpc_llc
 ```
