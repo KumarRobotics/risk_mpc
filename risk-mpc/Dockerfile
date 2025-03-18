@@ -278,7 +278,7 @@ RUN cd /home/dcist/dcist_ws/src/ \
 RUN cd /home/dcist \
   && git clone https://github.com/casadi/casadi.git -b main casadi \
   && cd casadi \
-  && git pull \
+  && git checkout 6704bbe \
   && mkdir build \
   && cd build \
   && cmake -DWITH_PYTHON=ON -DWITH_PYTHON3=ON -DWITH_IPOPT=ON ..\
