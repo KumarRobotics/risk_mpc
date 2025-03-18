@@ -29,7 +29,7 @@ To launch the base hardware (no sensors), use the following commands:
 
 ```
 ros2 launch jackal_robot bringup.launch.py
-ros2 run twist_stamper twist_stamper --ros-args -r  cmd_vel_in:=/jackal_velocity_controller/cmd_vel_unstamped -r cmd_vel_out:=/jackal_velocity_controller/cmd_vel
+ros2 run safety_controller safety_controller
 ```
 
 ### Notes on how to start the zed and ouster
