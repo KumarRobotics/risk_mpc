@@ -39,6 +39,7 @@
 [submodule "ws/src/DLIO"]
 	path = ws/src/DLIO
 	url = https://github.com/KumarRobotics/direct_lidar_inertial_odometry.git
+	branch = feature/ros2
 [submodule "ws/src/obstacle_detection"]
 	path = ws/src/obstacle_detection
 	url = https://github.com/frankgon1627/obstacle_detection.git

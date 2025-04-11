@@ -274,7 +274,7 @@ RUN cd /home/dcist \
 RUN cd /home/dcist/dcist_ws/src/ \
   && git clone --recursive https://github.com/frankgon1627/zed-ros2-wrapper.git
 
-# install and b uild casadi from source
+# install and build casadi from source
 RUN cd /home/dcist \
   && git clone https://github.com/casadi/casadi.git -b main casadi \
   && cd casadi \
@@ -297,7 +297,6 @@ RUN cd /home/dcist/dcist_ws \
     
 RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash" >> ~/.bashrc'
 RUN /bin/sh -c 'echo "source /home/dcist/dcist_ws/install/setup.bash" >> ~/.bashrc'
-# RUN /bin/sh -c 'echo "export ROS_DOMAIN_ID=5" >> ~/.bashrc' 
 # RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc' 
 # RUN /bin/sh -c 'echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc' 
 
