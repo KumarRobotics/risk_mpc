@@ -47,14 +47,6 @@ To receive odometry, use the following commands:
 ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=false
 ```
 
-### Additional relevant launch scripts
-
-To get static and dynamic transforms
-
-```
-ros2 run transforms transform_pub
-```
-
 To get obstacle detection
 
 ```
