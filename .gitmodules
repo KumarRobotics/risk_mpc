@@ -49,3 +49,7 @@
 [submodule "ws/src/safety_controller"]
 	path = ws/src/safety_controller
 	url = https://github.com/frankgon1627/safety_controller.git
+[submodule "ws/src/ublox"]
+	path = ws/src/ublox
+	url = https://github.com/KumarRobotics/ublox.git
+	branch = ros2_jackal
