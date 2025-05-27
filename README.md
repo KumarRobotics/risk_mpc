@@ -47,6 +47,7 @@ To receive odometry, use the following commands:
 ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=false
 ```
 
+### Notes on running the planning framework
 To get obstacle detection
 
 ```
@@ -60,3 +61,6 @@ To get the trajectory planning and control framework
 ros2 launch planners planners.launch.py
 ros2 run mpc_controller mpc_llc
 ```
+
+### Notes on launching the GPS for validation
+ros2 launch ublox_gps ublox_gps_node-composed-launch.py
