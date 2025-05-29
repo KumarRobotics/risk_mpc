@@ -53,6 +53,3 @@
 	path = ws/src/ublox
 	url = https://github.com/KumarRobotics/ublox.git
 	branch = ros2_jackal
-[submodule "ws/src/zed-ros2-wrapper"]
-	path = ws/src/zed-ros2-wrapper
-	url = https://github.com/stereolabs/zed-ros2-wrapper.git

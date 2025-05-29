@@ -271,10 +271,9 @@ RUN cd /home/dcist \
   && rm zed_sdk.run
 
 # install the ZED ROS2 wrapper
-# RUN cd /home/dcist/dcist_ws/src/ \
-#   && git clone --recursive https://github.com/stereolabs/zed-ros2-wrapper.git \
-#   && cd zed-ros2-wrapper \
-#   && git checkout jazzy
+# install the ZED ROS2 wrapper
+RUN cd /home/dcist/dcist_ws/src/ \
+  && git clone --recursive https://github.com/frankgon1627/zed-ros2-wrapper.git
 
 # install and build casadi from source
 RUN cd /home/dcist \
