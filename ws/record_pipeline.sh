@@ -1,6 +1,6 @@
 ros2 bag record /tf \
     /tf_static \
-    dlio/odom_node/odom \
+    /dlio/odom_node/odom \
     /groundgrid/segmented_cloud \
     /convex_hulls \
     /convex_hulls_viz \
