@@ -1,4 +1,4 @@
-Negative Obstacle Detection
+Risk MPC
 =============
 ![Docker CI Build](https://github.com/KumarRobotics/dcist_master/actions/workflows/docker-build.yaml/badge.svg?branch=master)
 
