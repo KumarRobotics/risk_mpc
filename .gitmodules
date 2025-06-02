@@ -53,3 +53,6 @@
 	path = ws/src/ublox
 	url = https://github.com/KumarRobotics/ublox.git
 	branch = ros2_jackal
+[submodule "ws/src/ntrip_client"]
+	path = ws/src/ntrip_client
+	url = https://github.com/LORD-MicroStrain/ntrip_client.git
