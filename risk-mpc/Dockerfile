@@ -286,8 +286,14 @@ RUN cd /home/dcist \
   && make -j $(nproc) \
   && sudo make install
 
-# build the dcist_ws
-RUN cd /home/dcist/dcist_ws \
+# Temporary hack solution to fix ROS2 installation issues
+RUN cd /etc/apt/sources.list.d \
+  && sudo rm -f ros2.list \
+  && export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F'"' '{print $4}')\
+  && curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb"
+
+RUN sudo apt install /tmp/ros2-apt-source.deb \
+  && cd /home/dcist/dcist_ws \
   && /bin/bash -c 'source /opt/ros/jazzy/setup.bash && \
     source /home/dcist/microros_ws/install/setup.bash && \
     source /home/dcist/dcist_ws/src/ws_livox/install/setup.bash && \
