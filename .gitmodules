@@ -56,3 +56,4 @@
 [submodule "ws/src/ntrip_client"]
 	path = ws/src/ntrip_client
 	url = https://github.com/LORD-MicroStrain/ntrip_client.git
+	branch = ros2
