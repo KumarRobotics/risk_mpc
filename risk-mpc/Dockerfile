@@ -251,6 +251,24 @@ RUN cd /home/dcist \
   && make -j $(nproc) \
   && sudo make install
 
+# download and install the ZED SDK
+RUN cd /home/dcist \
+  && wget -O zed_sdk.run https://download.stereolabs.com/zedsdk/4.2/cu12/ubuntu24?_gl=1*1x6bx14*_gcl_au*MTUzMjE4OTEyOS4xNzQwMTczNjA4 \
+  && chmod +x zed_sdk.run \
+  && ./zed_sdk.run -- silent skip_cuda skip_od_module\
+  && rm zed_sdk.run
+
+# install and build casadi from source
+RUN cd /home/dcist \
+  && git clone https://github.com/casadi/casadi.git -b main casadi \
+  && cd casadi \
+  && git checkout 6704bbe \
+  && mkdir build \
+  && cd build \
+  && cmake -DWITH_PYTHON=ON -DWITH_PYTHON3=ON -DWITH_IPOPT=ON ..\
+  && make -j $(nproc) \
+  && sudo make install
+
 # Copy the dcist_ws environment
 COPY --chown=$USER:$USER ../ws /home/$USER/dcist_ws
 
@@ -263,28 +281,9 @@ RUN cd /home/dcist/dcist_ws/src \
     cd /home/dcist/dcist_ws/src/ws_livox && \
     touch COLCON_IGNORE"
 
-# download and install the ZED SDK
-RUN cd /home/dcist \
-  && wget -O zed_sdk.run https://download.stereolabs.com/zedsdk/4.2/cu12/ubuntu24?_gl=1*1x6bx14*_gcl_au*MTUzMjE4OTEyOS4xNzQwMTczNjA4 \
-  && chmod +x zed_sdk.run \
-  && ./zed_sdk.run -- silent skip_cuda skip_od_module\
-  && rm zed_sdk.run
-
-# install the ZED ROS2 wrapper
 # install the ZED ROS2 wrapper
 RUN cd /home/dcist/dcist_ws/src/ \
   && git clone --recursive https://github.com/frankgon1627/zed-ros2-wrapper.git
-
-# install and build casadi from source
-RUN cd /home/dcist \
-  && git clone https://github.com/casadi/casadi.git -b main casadi \
-  && cd casadi \
-  && git checkout 6704bbe \
-  && mkdir build \
-  && cd build \
-  && cmake -DWITH_PYTHON=ON -DWITH_PYTHON3=ON -DWITH_IPOPT=ON ..\
-  && make -j $(nproc) \
-  && sudo make install
 
 # Temporary hack solution to fix ROS2 installation issues
 RUN cd /etc/apt/sources.list.d \
