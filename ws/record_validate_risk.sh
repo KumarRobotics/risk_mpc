@@ -1,12 +1,12 @@
 ros2 bag record /tf \
     /tf_static \
     /dlio/odom_node/odom \
+    /jackal_velocity_controller/odom \
     /ouster/imu \
     /ouster/imu_packets \
     /ouster/lidar_packets \
     /ouster/metadata \
     /ouster/points \
-    /ouster/scan \
     /obstacle_detection/positive_obstacle_grid \
     /obstacle_detection/averaged_positive_obstacle_grid \
     /obstacle_detection/dilated_positive_obstacle_grid \
