@@ -100,14 +100,18 @@ RUN export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-inf
   ros-dev-tools
 
 RUN sudo apt update \
-  && sudo apt upgrade -y \
   && sudo apt install -y \
   ros-jazzy-desktop
 
 # Install Clearpath Packages
 RUN wget https://packages.clearpathrobotics.com/public.key -O - | sudo apt-key add - \
   && sudo sh -c 'echo "deb https://packages.clearpathrobotics.com/stable/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/clearpath-latest.list' \
-  && sudo apt update\
+  && sudo apt update \
   && sudo apt install -y ros-jazzy-clearpath-robot
+
+WORKDIR /home/$USER
+
+# Place Clearpath launchfile in the container
+COPY --chown=$USER:$USER ../clearpath /etc/clearpath
 
 RUN /bin/sh -c 'echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc'
