@@ -115,3 +115,4 @@ WORKDIR /home/$USER
 COPY --chown=$USER:$USER ../clearpath /etc/clearpath
 
 RUN /bin/sh -c 'echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc'
+RUN /bin/sh -c 'echo "source /etc/clearpath/setup.bash" >> ~/.bashrc'
