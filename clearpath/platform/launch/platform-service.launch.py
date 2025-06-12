@@ -281,7 +281,7 @@ def generate_launch_description():
                     ,
                     ' clearpath_platform_msgs/srv/ConfigureMcu'
                     ,
-                    ' "{domain_id: 17,'
+                    ' "{domain_id: 0,'
                     ,
                     ' robot_namespace: \'jackal\'}"'
                     ,
