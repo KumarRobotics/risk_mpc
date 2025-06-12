@@ -111,8 +111,47 @@ RUN wget https://packages.clearpathrobotics.com/public.key -O - | sudo apt-key a
 
 WORKDIR /home/$USER
 
+# download and install the ZED SDK
+RUN cd /home/dcist \
+  && wget -O zed_sdk.run https://download.stereolabs.com/zedsdk/5.0/cu12/ubuntu24 \
+  && chmod +x zed_sdk.run \
+  && ./zed_sdk.run -- silent skip_cuda skip_od_module\
+  && rm zed_sdk.run
+
+# install and build casadi from source
+RUN cd /home/dcist \
+  && git clone https://github.com/casadi/casadi.git -b main casadi \
+  && cd casadi \
+  && git checkout 6704bbe \
+  && mkdir build \
+  && cd build \
+  && cmake -DWITH_PYTHON=ON -DWITH_PYTHON3=ON -DWITH_IPOPT=ON ..\
+  && make -j $(nproc) \
+  && sudo make install
+
 # Place Clearpath launchfile in the container
 COPY --chown=$USER:$USER ../clearpath /etc/clearpath
 
+# Copy the dcist_ws environment
+COPY --chown=$USER:$USER ../ws /home/$USER/dcist_ws
+
+# Initialize rosdep
+RUN sudo rosdep init \
+  && sudo apt-get clean \
+  && rosdep update
+
+# build the dcist_ws
+RUN cd /home/dcist/dcist_ws \
+  && /bin/bash -c 'source /opt/ros/jazzy/setup.bash && \
+    sudo apt update && \
+    rosdep update && \
+    rosdep install --from-paths src --ignore-src --rosdistro=jazzy -y && \
+    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs -DCMAKE_CXX_FLAGS="-Wl,--allow-shlib-undefined"'
+
+# Source setup files
 RUN /bin/sh -c 'echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc'
 RUN /bin/sh -c 'echo "source /etc/clearpath/setup.bash" >> ~/.bashrc'
+RUN /bin/sh -c 'echo "source ~/dcist_ws/install/setup.bash" >> ~/.bashrc'
+# Fix folder permissions
+RUN /bin/sh -c 'echo sudo chown $USER:$USER ~/dcist_ws >> ~/.bashrc'
+RUN /bin/sh -c 'echo sudo chown $USER:$USER ~/data >> ~/.bashrc'
