@@ -89,6 +89,9 @@ USER $USER
 RUN sudo apt-get purge -y '*opencv*'
 
 # Install ROS Jazzy
+RUN sudo apt install software-properties-common \
+  && sudo add-apt-repository universe
+
 RUN export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F'"' '{print $4}')\
   && curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb" \
   && sudo apt install /tmp/ros2-apt-source.deb \
@@ -104,7 +107,7 @@ RUN sudo apt update \
 # Install Clearpath Packages
 RUN wget https://packages.clearpathrobotics.com/public.key -O - | sudo apt-key add - \
   && sudo sh -c 'echo "deb https://packages.clearpathrobotics.com/stable/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/clearpath-latest.list' \
-  && sudo apt update \
-  && sudo apt install ros-jazzy-clearpath-robot
+  && sudo apt update\
+  && sudo apt install -y ros-jazzy-clearpath-robot
 
 RUN /bin/sh -c 'echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc'
