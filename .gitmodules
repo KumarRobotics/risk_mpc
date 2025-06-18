@@ -35,6 +35,6 @@
 	path = ws/src/ntrip_client
 	url = https://github.com/LORD-MicroStrain/ntrip_client.git
 	branch = ros2
-[submodule "ws/src/zed_ros2_wrapper"]
-	path = ws/src/zed_ros2_wrapper
-	url = https://github.com/stereolabs/zed-ros2-wrapper.git
+[submodule "ws/src/zed-ros2-wrapper"]
+	path = ws/src/zed-ros2-wrapper
+	url = https://github.com/KumarRobotics/zed-ros2-wrapper.git
