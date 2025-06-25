@@ -153,6 +153,7 @@ RUN echo 'export PS1="\[$(tput setaf 2; tput bold)\]\u\[$(tput setaf 7)\]@\[$(tp
 # Fix folder permissions
 RUN /bin/sh -c 'echo sudo chown $USER:$USER ~/dcist_ws >> ~/.bashrc'
 RUN /bin/sh -c 'echo sudo chown $USER:$USER ~/data >> ~/.bashrc'
+RUN /bin/sh -c 'echo sudo chown $USER:$USER ~/.ros >> ~/.bashrc'
 # Source setup files
 RUN /bin/sh -c 'echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc'
 RUN /bin/sh -c 'echo "source /etc/clearpath/setup.bash" >> ~/.bashrc'
