@@ -293,5 +293,5 @@ def generate_launch_description():
     ld.add_action(node_imu_filter_madgwick)
     ld.add_action(node_micro_ros_agent)
     # ld.add_action(node_nmea_topic_driver)
-    ld.add_action(process_configure_mcu)
+    # ld.add_action(process_configure_mcu)
     return ld

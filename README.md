@@ -32,12 +32,17 @@ ros2 launch /etc/clearpath/platform/launch/platform-service.launch.py
 TODO: Safety controller
 ```
 
+If the jackal does not move with teleop, make sure to check the following things:
+- The controller is in manual mode
+- run `ros2 service list`. You'll find a service that looks like `/platform/mcu/configure`. Note that it may have a prefix, such as `/jackal`. If this is the case, the namespace needs to be udpated. Run the following command: `ros2 service call /platform/mcu/configure clearpath_platform_msgs/srv/ConfigureMcu "{domain_id: 0, robot_namespace: 'j100_0000'}"`
+
+
 ### Notes on how to start the zed and ouster
 To launch the camera and LIDAR, use the following commands:
 
 ```
-ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zed2i
 ros2 launch ouster_ros sensor.composite.launch.py viz:=false
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zed2i
 ```
 
 ### Notes on how to get odometry estimates
