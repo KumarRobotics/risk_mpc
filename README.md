@@ -28,8 +28,8 @@ cd risk_mpc && git submodule update --init --recursive
 To launch the base hardware (no sensors), use the following commands:
 
 ```
-ros2 launch jackal_robot bringup.launch.py
-ros2 run safety_controller safety_controller
+ros2 launch /etc/clearpath/platform/launch/platform-service.launch.py
+TODO: Safety controller
 ```
 
 ### Notes on how to start the zed and ouster
