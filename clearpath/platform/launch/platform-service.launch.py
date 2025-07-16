@@ -266,29 +266,19 @@ def generate_launch_description():
 
     # Processes
     process_configure_mcu = ExecuteProcess(
-        shell=True,
-        cmd=
-            [
-                [
-                    'export ROS_DOMAIN_ID=0;'
-                    ,
-                ]
-                ,
-                [
-                    FindExecutable(name='ros2')
-                    ,
-                    ' service call platform/mcu/configure'
-                    ,
-                    ' clearpath_platform_msgs/srv/ConfigureMcu'
-                    ,
-                    ' "{domain_id: 0,'
-                    ,
-                    ' robot_namespace: \'jackal\'}"'
-                    ,
-                ]
-                ,
-            ]
+    cmd=[
+        FindExecutable(name='ros2'),
+        'service', 'call',
+        'platform/mcu/configure',
+        'clearpath_platform_msgs/srv/ConfigureMcu',
+        '{domain_id: 0, robot_namespace: \'j100_0000\'}'
+    ],
+    env={
+        'ROS_DOMAIN_ID': '0'
+    },
+    output='screen'
     )
+
 
     # Create LaunchDescription
     ld = LaunchDescription()
