@@ -101,7 +101,7 @@ RUN export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-inf
 
 RUN sudo apt update \
   && sudo apt install -y \
-  ros-jazzy-desktop
+  ros-jazzy-ros-base
 
 # Install Clearpath Packages
 RUN wget https://packages.clearpathrobotics.com/public.key -O - | sudo apt-key add - \
