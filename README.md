@@ -1,6 +1,8 @@
-Risk MPC
+Risk-Aware Model Predictive Control for Unmanned Ground Vehicles
 =============
 ![Docker CI Build](https://github.com/KumarRobotics/dcist_master/actions/workflows/docker-build.yaml/badge.svg?branch=master)
+
+The website for this project can be found at: https://frankgon1627.github.io/risk_mpc.github.io/
 
 This is the base image used for negative obstacle detection at KR, for the Jackals to run ROS2-Jazzy on Ubuntu-24.04
 
